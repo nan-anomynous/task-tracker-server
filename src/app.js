@@ -6,7 +6,13 @@ const taskRoutes = require("./routes/task.routes");
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: [
+    "http://localhost:5173",
+    "https://task-tracker-server-z0mr.onrender.com"
+  ],
+  credentials: true
+}));
 
 app.use(express.json());
 
