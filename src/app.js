@@ -9,8 +9,9 @@ const app = express();
 app.use(cors({
   origin: [
     "http://localhost:5173",
-    "https://task-tracker-server-z0mr.onrender.com"
+    "https://task-tracker-client-l1fc.vercel.app"
   ],
+  methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
 
